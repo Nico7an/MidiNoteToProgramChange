@@ -1,0 +1,25 @@
+[package]
+name = "midi_note_to_pc"
+version = "0.1.0"
+edition = "2021"
+authors = ["Antigravity"]
+description = "A MIDI Note to Program Change VST3/CLAP plugin"
+
+[workspace]
+members = ["xtask"]
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+nih_plug = { git = "https://github.com/robbert-vdh/nih-plug.git" }
+
+[profile.release]
+lto = "thin"
+strip = "symbols"
+panic = "unwind"
+
+[profile.profiling]
+inherits = "release"
+debug = true
+strip = "none"
