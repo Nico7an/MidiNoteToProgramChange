@@ -1,0 +1,14 @@
+/target
+**/*.rs.bk
+Cargo.lock
+u_errors.txt
+err.txt
+err2.txt
+err3.txt
+err4.txt
+err5.txt
+*.vst3
+*.clap
+*.dll
+*.so
+*.dylib
